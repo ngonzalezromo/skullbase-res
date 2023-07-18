@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>AR.js 3D Object</title>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- Add the QR code marker to display the 3D object -->
+        <a-marker preset="hiro">
+            <!-- Define the 3D model and its properties -->
+            <a-entity
+                gltf-model="3D_model.glb" <!-- Replace with your actual .glb file name -->
+                scale="0.1 0.1 0.1" <!-- Adjust the scale as needed -->
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
